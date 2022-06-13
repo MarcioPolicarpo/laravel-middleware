@@ -16,6 +16,26 @@ class EnsureTokenIsValid
      */
     public function handle(Request $request, Closure $next)
     {
+        // Getting token from request header
+        // if ($request->header('token') !== "MySecret")
+        // {
+        //     $message = [
+        //         'errorCode' => -1,
+        //         'message' => 'That is an invalid token',
+        //         'timestamp' => now()];
+        //     return response($message, 401);
+        // }
+
+        // Getting token from request URI
+        // if ($request->token !== "MySecret")
+        // {
+        //     $message = [
+        //         'errorCode' => -1,
+        //         'message' => 'That is an invalid token',
+        //         'timestamp' => now()];
+        //     return response($message, 401);
+        // }
+
         return $next($request);
     }
 }
