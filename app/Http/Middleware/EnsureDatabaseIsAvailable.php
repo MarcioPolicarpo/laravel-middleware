@@ -28,7 +28,8 @@ class EnsureDatabaseIsAvailable
             return response()->json([
                 'errorCode' => $e->getCode(),
                 'message' => 'Database is unavailable. Try again in a few minutes',
-                'timestamp' => now()]);
+                'timestamp' => now()
+            ]);
         }
     }
 }
